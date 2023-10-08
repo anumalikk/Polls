@@ -1,0 +1,25 @@
+  .img-width{
+    width: 3rem;
+    content: ;
+  }
+  
+  .img-height{
+    height: 3rem;
+  }
+
+  .underline {
+
+    text-decoration-line: underline;
+  }
+
+  .underline-offset-4 {
+    text-underline-offset: 4px;
+}
+
+.anchor-text {
+  color: black;
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Add hand cursor icon on hover */
+}
+  
+  
