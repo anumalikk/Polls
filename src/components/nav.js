@@ -26,7 +26,7 @@ const Nav = (props) => {
         Leaderboard
       </Link>
       <Link
-        to="/new"
+        to="/add"
         className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
       >
         New Poll

@@ -1,6 +1,7 @@
 import "../App.css";
 import "../index.css";
 import React from "react";
+import {calculateScoresAndReturnUsers} from "../utils/helpers";
 
 import { connect } from "react-redux";
 
@@ -49,10 +50,11 @@ function LeaderBoard(props) {
 }
 
 const mapStateToProps = ({ users }) => {
+  const usersWithScores = calculateScoresAndReturnUsers(users);
+
   return {
-    users: Object.values(users).sort(
-      (a, b) => Object.keys(b.answers).length - Object.keys(a.answers).length
-    ),
+    
+    users: usersWithScores.sort((a, b) => b.score - a.score)
   };
 };
 

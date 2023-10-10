@@ -35,4 +35,21 @@ export const sortQuestionsByTimestamp = (questions) => {
 
   return sortedQuestions;
 };
+
+// Function to calculate the score for a user
+function calculateUserScore(user) {
+  const createdQuestionsCount = user.questions.length;
+  const answeredQuestionsCount = Object.keys(user.answers).length;
+  const score = createdQuestionsCount + answeredQuestionsCount;
+  return { ...user, score };
+}
+
+// Function to calculate scores for all users and return the modified users object
+export function calculateScoresAndReturnUsers(users) {
+  const usersWithScores = Object.keys(users).map((userId) => {
+    return calculateUserScore(users[userId]);
+  });
+
+  return usersWithScores;
+}
   

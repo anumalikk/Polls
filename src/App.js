@@ -49,7 +49,7 @@ function App() {
           }
         />
         <Route
-          path="/new"
+          path="/add"
           exact
           element={
             <PrivateRoute>
